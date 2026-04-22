@@ -1,0 +1,11 @@
+<h1>Available Rooms</h1>
+
+{% for room in rooms %}
+<div>
+    <h3>{{ room.room_name }}</h3>
+    <p>Capacity: {{ room.capacity }}</p>
+    <p>Type: {{ room.type }}</p>
+    <a href="/book/{{ room.room_id }}">Book Now</a>
+</div>
+<hr>
+{% endfor %}
